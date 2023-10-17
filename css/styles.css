@@ -56,7 +56,7 @@ img {
 
 .container {
   width: 100%;
-  padding: 0 15px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -196,7 +196,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/people-office-d1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -211,14 +211,13 @@ img {
 
 .slogan-text {
   color: #ffffff;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   max-width: 496px;
-  margin-bottom: 48px;
-  padding: 188px 316px 0px 316x;
+  margin-bottom: 72px;
 }
 
 .order-btn {
@@ -330,7 +329,6 @@ img {
 
 .team-item {
   width: 264px;
-  /* width: calc((100% - 24px * 3) / 4); */
 }
 
 .team-list-item {
@@ -844,7 +842,13 @@ img {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 1157px;
+    max-width: 768px;
+  }
+
+  .slogan-text {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
   }
 
   .solution-menu {
@@ -864,11 +868,26 @@ img {
     justify-content: center;
     gap: 64px 24px;
   }
+
+  .digest-menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 72px 24px;
+  }
+
+  .digest-item {
+    width: calc((100% - 24px) / 2);
+  }
 }
 
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1440px;
+    max-width: 1158px;
+  }
+
+  .slogan-text {
+    margin-bottom: 48px;
   }
 
   .solution {
@@ -904,7 +923,18 @@ img {
 
   .team-list {
     flex-direction: row;
-    justify-content: center;
     gap: 24px;
+  }
+
+  .team-item {
+    width: calc((100% - 24px * 3) / 4);
+  }
+
+  .digest-item {
+    width: calc((100% - 24px * 2) / 3);
+  }
+
+  .digest-menu {
+    gap: 48px 24px;
   }
 }
