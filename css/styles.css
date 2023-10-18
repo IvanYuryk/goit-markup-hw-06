@@ -81,7 +81,7 @@ img {
 }
 
 .heder-menu {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 40px;
 }
@@ -152,7 +152,7 @@ img {
 }
 
 .header-list {
-  display: flex;
+  display: none;
   gap: 40px;
 }
 
@@ -183,6 +183,64 @@ img {
 .header-list-item :focus,
 .header-list-item :active {
   color: #404bbf;
+}
+
+.header-open-btn {
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*===== mob-menu =====*/
+
+.mob-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  padding: 24px 24px 40px 16px;
+}
+
+.header-close-btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 24px;
+  background: none;
+  border: none;
+}
+.icon-menu {
+}
+.mob-menu-list {
+  margin-bottom: 168px;
+}
+.mob-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mob-link {
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+.mob-list {
+}
+.mob-list-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.mob-address-link {
+}
+
+.mob-social {
+  justify-content: space-between;
+  margin-top: 48px;
 }
 
 /*===== slogan =====*/
@@ -440,9 +498,6 @@ img {
 .digest-list:active {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.portfolio-img {
 }
 
 .digest-cover-all {
