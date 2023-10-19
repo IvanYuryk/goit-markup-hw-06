@@ -204,6 +204,8 @@ img {
   height: 100vh;
   background-color: #ffffff;
   padding: 24px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .header-close-btn {
@@ -212,12 +214,9 @@ img {
   margin-bottom: 24px;
   background: none;
   border: none;
+  justify-content: space-between;
 }
-.icon-menu {
-}
-.mob-menu-list {
-  margin-bottom: 168px;
-}
+
 .mob-menu-item:not(:last-child) {
   margin-bottom: 40px;
 }
