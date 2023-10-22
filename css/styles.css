@@ -65,6 +65,8 @@ img {
 /* ========= header ========= */
 
 .header {
+  padding-top: 17.5px;
+  padding-bottom: 17.5px;
   background: #ffffff;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -164,7 +166,6 @@ img {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  font-style: normal;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -195,24 +196,6 @@ img {
   align-items: center;
 }
 
-.header-close-btn {
-  background-color: rgba(231, 233, 252, 0.25);
-  border: 1px solid #0000001a;
-  border-radius: 50%;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 /*===== mob-menu =====*/
 
 .mob-menu {
@@ -222,19 +205,50 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
+  padding-right: 24px;
+  padding-left: 16px;
+  padding-top: 24px;
+  padding-bottom: 40px;
   background-color: #ffffff;
-  padding: 24px 24px 40px 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: auto;
   opacity: 0;
   visibility: hidden;
   pointer-events: auto;
 }
 
+.menu-close-btn {
+  background-color: rgba(231, 233, 252, 0.25);
+  border: 1px solid #0000001a;
+  border-radius: 50%;
+  position: relative;
+  /* top: 24px;
+  right: 24px; */
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-close {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .mob-menu-item:not(:last-child) {
   margin-bottom: 40px;
+}
+
+.mob-menu-list {
+  margin-bottom: auto;
 }
 
 .mob-link {
@@ -244,6 +258,19 @@ img {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+}
+
+.mob-link-col {
+  color: #404bbf;
+}
+
+.mob-list {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.mob-mail {
+  color: #434455;
 }
 
 .mob-list-item:not(:last-child) {
@@ -258,9 +285,8 @@ img {
 /*===== slogan =====*/
 
 .slogan {
-  max-width: 1440px;
   margin: 0 auto;
-  padding: 188px 0;
+  padding: 72px 0;
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -298,8 +324,9 @@ img {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
-  max-width: 496px;
+  max-width: 222px;
   margin-bottom: 72px;
+  text-transform: capitalize;
 }
 
 .order-btn {
@@ -337,10 +364,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
-}
-
-.solution-cover {
-  width: 288px;
 }
 
 .icon-solution {
@@ -451,7 +474,6 @@ img {
 .social {
   display: flex;
   gap: 24px;
-  justify-content: center;
 }
 
 .social-item {
@@ -621,6 +643,10 @@ img {
   letter-spacing: 0.02em;
 }
 
+.crypt-second {
+  margin-bottom: 72px;
+}
+
 .social-title {
   text-align: center;
   color: #ffffff;
@@ -635,7 +661,6 @@ img {
   display: flex;
   gap: 16px;
   justify-content: center;
-  margin-bottom: 72px;
 }
 
 .footer-form {
@@ -732,7 +757,6 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* rgba(231, 233, 252, 1) */
 .modal-close-btn {
   background-color: #e7e9fc;
   border: 1px solid #0000001a;
@@ -866,10 +890,12 @@ img {
 }
 
 .check-text {
+  display: flex;
   color: #8e8f99;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  align-items: center;
 }
 
 .check-text a {
@@ -937,11 +963,18 @@ img {
     gap: 12px;
   }
 
+  .address-link {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+  }
+
   .header-open-btn {
     display: none;
   }
 
   .slogan {
+    padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -962,9 +995,11 @@ img {
   }
 
   .slogan-text {
+    max-width: 496px;
     font-size: 56px;
     line-height: 1.07;
     margin-bottom: 36px;
+    text-transform: none;
   }
 
   .solution-menu {
@@ -972,7 +1007,7 @@ img {
   }
 
   .solution-list {
-    width: calc((100% - 48px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 
   .solution-list-item {
@@ -1066,10 +1101,6 @@ img {
     gap: 24px;
   }
 
-  .solution-cover {
-    width: 264px;
-  }
-
   .solution-list {
     width: calc((100% - 72px) / 4);
   }
@@ -1116,10 +1147,12 @@ img {
   }
 
   .crypt-first {
+    margin-bottom: 0;
     margin-right: 120px;
   }
 
   .crypt-second {
+    margin-bottom: 0;
     margin-right: 80px;
   }
 }
