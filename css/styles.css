@@ -276,10 +276,9 @@ img {
 }
 
 .mob-social {
-  justify-content: space-between;
   margin-top: 48px;
   display: flex;
-  gap: 24px;
+  gap: 40px;
 }
 
 /*===== slogan =====*/
