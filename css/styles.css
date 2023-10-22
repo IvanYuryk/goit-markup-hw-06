@@ -1043,6 +1043,10 @@ img {
     gap: 72px 24px;
   }
 
+  .footer-logo-text {
+    width: 264px;
+  }
+
   .container-text,
   .social-title {
     text-align: left;
@@ -1116,7 +1120,9 @@ img {
 
   .solution-list-item {
     text-align: left;
+    font-size: 20px;
     font-weight: 500;
+    line-height: 1.2;
   }
 
   .solution-text {
@@ -1149,6 +1155,8 @@ img {
   .crypt-cover {
     flex-wrap: nowrap;
     align-items: baseline;
+    width: 1125px;
+    gap: unset;
   }
 
   .crypt-first {
